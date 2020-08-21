@@ -19,6 +19,7 @@
 
 package net.minecraftforge.forgespi.language;
 
+import org.apache.commons.lang3.tuple.Pair;
 import org.apache.maven.artifact.versioning.VersionRange;
 
 import java.util.List;
@@ -26,7 +27,10 @@ import java.util.Map;
 
 public interface IModFileInfo
 {
-    List<IModInfo> getMods();
+    /**
+     * @return The parsed mods and the errors for mods that could not be parsed
+     */
+    Pair<List<IModInfo>, List<String>> getMods();
 
     String getModLoader();
 
