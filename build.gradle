@@ -45,7 +45,7 @@ test {
 ext.sharedManifest = manifest {
     attributes(['Specification-Title': 'forgespi',
                 'Specification-Vendor': 'forge',
-                'Specification-Version': '3', // Currently version 3 of the forgespi specification
+                'Specification-Version': '4', // Currently version 4 of the forgespi specification
                 'Implementation-Title': project.name,
                 'Implementation-Version': "${project.version}+${System.getenv('BUILD_NUMBER')?:0}+${grgit.branch.current().getName()}.${grgit.head().abbreviatedId}",
                 'Implementation-Vendor': 'forge',
